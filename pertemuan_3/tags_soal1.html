@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulir User</title>
+</head>
+<body >
+    <h2>Identitas User</h2>
+    <form>
+        <!-- Fieldset otomatis ada border -->
+        <fieldset>
+            <legend>Informasi Pribadi</legend>
+            
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="rating">Rating game sementara:</label>
+            <input list="rating" id="browser" name="rating">
+            <datalist id="rating">
+                <option value="5/5">
+                <option value="4/5">
+                <option value="3/5">
+                <option value="2/5">
+                <option value="1/5">
+            </datalist>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Kenapa Tertarik Memainkan Game</legend>
+            <label for="platform">Tahu dari:</label>
+            <select id="platform">
+                <optgroup label="Youtube">
+                    <option value="Stream">Streamer</option>
+                    <option value="Short">Youtube shorts </option>
+                    <option value="review">Game Review</option>
+                </optgroup>
+                <optgroup label="Public">
+                    <option value="Merchandise">Merchandise</option>
+                    <option value="Ads">Ads</option>
+                </optgroup>
+            </select>
+        </fieldset>
+</body>
+</html>

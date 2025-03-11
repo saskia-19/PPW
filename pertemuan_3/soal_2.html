@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Form Pendaftaran UTBK</title>
+    <script>
+        function tampilkanNama() {
+            let nama = document.getElementById("nama").value;
+            document.getElementById("outputNama").value = nama;
+        }
+        function tampilkanGender() {
+            let gender;
+            const radios = document.getElementsByName("gender");
+            for (let i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    gender = radios[i].value;
+                    break;
+                }
+            }
+            document.getElementById("outputGender").value = gender;
+        }
+        function tampilkanProdi() {
+            let program = document.getElementById("program").value;
+            document.getElementById("outputProgram").value = program;
+        }
+        function tampilkanNISN() {
+            let nisn = document.getElementById("nisn").value;
+            document.getElementById("outputNISN").value = nisn;
+        }
+        function tampilkanSekolah() {
+            let sekolah = document.getElementById("sekolah").value;
+            document.getElementById("outputSekolah").value = sekolah;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <img src="logo-kemendikbud.png" alt="Logo Kemendikbud" height="70">
+        <h2>Form Pendaftaran UTBK</h2>
+    </center>
+    
+    <div align="center">
+        <form action="submit.html" method="post" enctype="multipart/form-data">
+            <fieldset style="width: 50%;">
+                <legend>Informasi Pribadi</legend>
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required oninput="tampilkanNama()"><br><br>
+
+                <label>Jenis Kelamin:</label>
+                <input type="radio" name="gender" value="Laki-laki" required onclick="tampilkanGender()"> Laki-laki
+                <input type="radio" name="gender" value="Perempuan" onclick="tampilkanGender()"> Perempuan<br><br>
+            </fieldset>
+
+            <fieldset style="width: 50%;">
+                <legend>Informasi Pendaftaran UTBK</legend>
+                <label for="nisn">NISN:</label>
+                <input type="text" id="nisn" name="nisn" placeholder="Masukkan NISN" required oninput="tampilkanNISN()"><br><br>
+
+                <label for="sekolah">Asal Sekolah:</label>
+                <input type="text" id="sekolah" name="sekolah" placeholder="Masukkan nama sekolah" required oninput="tampilkanSekolah()"><br><br>
+
+                <label for="foto">Unggah Foto Peserta:</label>
+                <input type="file" id="foto" name="foto" accept="image/*" required><br><br>
+
+                <img src="ketentuan_utbk.jpg" alt="Logo Kemendikbud" width="300">
+            </fieldset>
+
+            <fieldset style="width: 50%;">
+                <legend>Pilihan Program Studi</legend>
+                <label for="program">Pilih Program Studi:</label>
+                <select id="program" name="program" required onchange="tampilkanProdi()">
+                    <option value="">-- Pilih Program Studi --</option>
+                    <optgroup label="Kedokteran">
+                        <option value="gizi">Gizi Kesehatan</option>
+                        <option value="perawat">Ilmu Keperawatan</option>
+                    </optgroup>
+                    <optgroup label="Sekolah Vokasi">
+                        <option value="TRPL">Teknologi Rekayasa Perangkat Lunak</option>
+                        <option value="TRI">Teknologi Rekayasa Internet</option>
+                    </optgroup>
+                </select><br><br>
+            </fieldset><br>
+            
+            <input type="submit" value="Daftar">
+            <input type="reset" value="Reset"><br><br>
+            
+            <fieldset style="width: 50%" align="left">
+                <legend>Data yang Anda masukkan:</legend>
+                <output id="outputNama" name="outputNama"></output><br>
+                <output id="outputGender" name="outputGender"></output><br>
+                <output id="outputNISN" name="outputNISN"></output><br>
+                <output id="outputSekolah" name="outputSekolah"></output><br>
+                <output id="outputProgram" name="outputProgram"></output>
+                
+            </fieldset>
+        </form>
+    </div>
+    <svg width="50" height="50" viewBox="-10 -10 200 200">
+        <circle cx="100" cy="50" r="30" fill="pink" />
+        <circle cx="130" cy="80" r="30" fill="pink" />
+        <circle cx="100" cy="110" r="30" fill="pink" />
+        <circle cx="70" cy="80" r="30" fill="pink" />
+        <circle cx="100" cy="80" r="20" fill="yellow" />
+    </svg>
+</body>
+</html>
