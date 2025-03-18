@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hewan Laut</title>
+    <style>
+        body {
+            background-color: #0077B6;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #005F73;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 15px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        nav a::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 100%;
+            height: 5px;
+            background-color: white;
+            transform: translateX(-50%) scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        nav a:hover::before {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        .content {
+            background-color: #0096C7;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        .comment-section {
+            background-color: #005F73;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        .comment-section h2 {
+            margin-bottom: 10px;
+        }
+
+        .comment-section textarea {
+            width: 90%;
+            height: 100px;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 1em;
+        }
+
+        .comment-section button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            background-color: #FFB703;
+            color: black;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .comment-section button:hover {
+            background-color: #FF8800;
+        }
+
+        .comments {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .comment {
+            background: #0086A8;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Selamat Datang di Dunia Hewan Laut!</h1>
+    <p>Ayo kenali beberapa hewan laut yang menggemaskan ini!</p>
+</header>
+
+<nav>
+    <a href="#dolphin">Lumba-Lumba</a>
+    <a href="#seal">Seal</a>
+    <a href="#whale">Paus</a>
+    <a href="#shark">Hiu</a>
+</nav>
+
+<main>
+    <section>
+        <div id="dolphin" class="content">
+            <h2>Lumba-Lumba</h2>
+            <p><strong>Nama Ilmiah:</strong> Delphinidae</p>
+            <p><strong>Habitat:</strong> Samudra dan beberapa sungai besar</p>
+            <img src="lumba_lumba.jpg" alt="Lumba-Lumba">
+            <p>Lumba-lumba adalah mamalia laut yang terkenal karena kecerdasannya.
+                Mereka hidup di perairan samudra dan beberapa sungai besar. 
+                Lumba-lumba menggunakan ekolokasi untuk berkomunikasi dan berburu mangsa.</p>
+        </div>
+
+        <div id="seal" class="content">
+            <h2>Seal</h2>
+            <p><strong>Nama Ilmiah:</strong> Phocidae</p>
+            <p><strong>Habitat:</strong> Perairan dingin dan kutub</p>
+            <img src="seal.jpg" alt="Seal">
+            <p>Seal adalah mamalia laut yang memiliki tubuh gemuk dan kaki berbentuk sirip. 
+                Seal adalah mamalia laut yang hidup di perairan dingin dan daerah kutub. 
+                Seal sering naik ke daratan untuk beristirahat dan berkembang biak.
+            </p>
+        </div>
+
+        <div id="whale" class="content">
+            <h2>Paus</h2>
+            <p><strong>Nama Ilmiah:</strong> Cetacea</p>
+            <p><strong>Habitat:</strong> Laut dalam di seluruh dunia</p>
+            <img src="paus.jpg" alt="Paus">
+            <p>Paus adalah mamalia laut terbesar di dunia. 
+                Mereka hidup di laut dalam dan dikenal sebagai hewan sosial yang berkomunikasi melalui suara unik. Beberapa spesies, seperti paus biru, bisa tumbuh hingga lebih dari 30 meter.
+            </p>
+        </div>
+
+        <div id="shark" class="content">
+            <h2>Hiu</h2>
+            <p><strong>Nama Ilmiah:</strong> Selachimorpha</p>
+            <p><strong>Habitat:</strong> Lautan di seluruh dunia</p>
+            <img src="hiu.jpg" alt="Hiu">
+            <p>Hiu adalah predator laut yang terkenal dengan gigi tajam dan indra penciuman yang sangat tajam. Mereka tersebar di berbagai lautan di seluruh dunia dan memiliki peran penting dalam menjaga keseimbangan ekosistem laut. </p>
+        </div>
+    </section>
+</main>
+<section class="comment-section">
+    <h2>Kolom Komentar</h2>
+    <textarea id="commentInput" placeholder="Tulis komentar Anda..."></textarea>
+    <button onclick="addComment()">Kirim</button>
+    <div class="comments" id="commentList"></div>
+</section>
+
+<script>
+    function addComment() {
+        let commentInput = document.getElementById("commentInput");
+        let commentList = document.getElementById("commentList");
+        
+        if (commentInput.value.trim() !== "") {
+            let newComment = document.createElement("div");
+            newComment.classList.add("comment");
+            newComment.textContent = commentInput.value;
+            commentList.appendChild(newComment);
+            commentInput.value = "";
+        }
+    }
+</script>
+
+</body>
+</html>
