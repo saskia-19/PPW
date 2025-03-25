@@ -1,6 +1,6 @@
 body {
     font-family: 'Manrope', sans-serif;
-    background-color: hsl(210, 46%, 95%); /* Light Grayish Blue */
+    background-color: hsl(210, 46%, 95%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,10 +137,10 @@ h4 {
     }
     .tooltip {
         position: absolute;
-        bottom: 40px; /* Sesuai dengan posisi di JS */
+        bottom: 40px;
         left: 50%;
         transform: translateX(-50%);
-        width: 250px; /* Sesuai ukuran tooltip */
+        width: 250px;
         height: 50px;
         background-color: hsl(217, 19%, 35%);
         display: none;
