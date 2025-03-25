@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: normal;
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    height: 300px;
+    background-image: url('images/boston-public-library-KeIJEFbC630-unsplash.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+/* Navigation */
+.nav__wrapper {
+    margin: 8px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: #e3f0ff;
+}
+
+.nav__item {
+    padding: 10px 18px;
+}
+
+.nav__link {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+
+.nav__item--active {
+    border-bottom: 4px solid #8f8fff;
+}
+
+.nav__icon {
+    margin-right: 5px;
+}
+
+/* Sectino */
+.section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section_content {
+    width: 600px;
+}
+
+.section_sidebar {
+    width: 280px;
+    padding: 20px 0;
+}
+
+/* Article */
+.article {
+    margin: 8px 0;
+    padding: 20px;
+    background: #f2f6fb;
+    display: flex;
+    font-family: "Mulish", sans-serif;
+}
+
+.article__img {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 10px;
+}
+
+.article__content {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #6c6c6c;
+}
+
+.article__title {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #717171;
+}
+
+.article__contentwrap {}
+
+.article__contentwrap--img {
+    width: 400px;
+}
+
+.article__buttons {
+    display: flex;
+}
+
+.article__button {
+    background: #6262dc;
+    border: 0;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    margin: 8px 5px 0 0;
+    display: flex;
+}
+
+.article__content--quote {
+    font-weight: 800;
+    margin: 10px 10px 10px 0;
+    font-size: 16px;
+    border-left: 2px solid #6262dc;
+    padding-left: 10px;
+}
+
+.article_gal {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.article_gal__item {
+    width: 180px;
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+}
+
+.article_gal__btn {
+    position: absolute;
+    right: 0;
+    border: 0;
+    background: #3a3a8b8c;
+    width: 35px;
+    height: 160px;
+    top: 0;
+    cursor: pointer;
+}
+
+.article_gal__btn .btn__icon {
+    width: 20px!important;
+}
+
+.btn__icon {
+    width: 15px;
+    margin-right: 5px;
+}
+
+/* Sidebar */
+.profile {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.profile__img {
+    width: 80px;
+    height: 80px;
+    background-size: cover!important;
+    border-radius: 50%;
+}
+
+.profile__name {
+    margin: 0;
+}
+
+.profile__desc {
+    font-family: "Mulish", sans-serif;
+    font-size: 14px;
+}
+
+/* Friends */
+.friends__img {
+    width: 60px;
+    height: 60px;
+    background-size: cover!important;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.friends__name {
+    margin: 0;
+    color: grey;
+    font-size: 15px;
+}
+
+.friends__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.friends__btn_poke {
+    background: #43c9a5;
+    border: 0;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    margin: 8px 5px 0 0;
+    display: flex;
+}
