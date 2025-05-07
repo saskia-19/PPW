@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        alert("Selamat datang!")
+        function askWellBeing(){
+            console.log("Good to see you!")
+            alert("Kamu suka makan apa?")
+        }
+        function askFavFood(){
+            var jumlahKlik = 0;
+
+            var askFavMovies = document.getElementById("askFavmovie");
+            askFavmovie.innerHTML = "Kamu suka film apa?";
+
+            var askJob = document.getElementById("askJob");
+            askJob.innerHTML += "Kalau boleh tau kamu kerja sebagai apa?<br>"
+        }
+    </script>
+</head>
+<body>
+    <button onclick="askWellBeing()">Button1</button>
+    <button onclick="askFavFood()">Button2</button>
+    <p id="askFavmovie"></p>
+    <p id="askJob"></p>
+</body>
+</html>
